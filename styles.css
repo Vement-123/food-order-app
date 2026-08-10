@@ -1,0 +1,320 @@
+﻿/* ===============================
+   ISAAC'S KITCHEN WEBSITE
+================================= */
+#invoice {
+  font-family: cursive;
+  font-style: italic;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact{
+  font-family: cursive;
+  font-weight: bold;
+}
+
+.image textarea {
+  background-color: transparent;
+  border: none;
+
+}
+
+.image {
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f8f5f2;
+  color: #333;
+  line-height: 1.6;
+  background-image: url("images/background.jpg");
+    background-size: cover;
+  background-position: justify;
+  background-size: 500px 373.594px;
+  border-radius: 10px; 
+}
+#invoice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 20px;
+  width:unset   ;
+}
+
+/* ================= HEADER ================= */
+
+.headers {
+  background: linear-gradient(135deg, #5a2d0c, #8b4513, #d2691e);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background: url("images/hero.JPG") center/cover no-repeat;
+}
+
+.hero h1 {
+  font-size: 55px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.hero p {
+  font-size: 22px;
+  color: white;
+}
+
+/* ================= HEADINGS ================= */
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+h2 {
+  color: #8b4513;
+  font-size: 35px;
+}
+
+p {
+  text-align: center;
+  padding: 10px;
+}
+
+/* ================= BUTTONS ================= */
+
+button {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.3s;
+  margin: 5px;
+}
+
+button:hover {
+  background: #5a2d0c;
+  transform: scale(1.05);
+}
+
+/* ================= LINKS ================= */
+
+a {
+  text-decoration: none;
+}
+
+.checkers {
+  text-align: center;
+  margin: 20px;
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 25px;
+}
+
+/* ================= CARD ================= */
+
+.card {
+  width: 300px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.price {
+  color: #e53935;
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* ================= INPUTS ================= */
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff9800;
+}
+
+textarea {
+  resize: none;
+}
+
+/* ================= QUANTITY ================= */
+
+span {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+/* ================= MENU LIST ================= */
+
+.listed {
+  list-style: none;
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+}
+
+.listed li {
+  background: white;
+  margin: 12px;
+  padding: 18px;
+  border-radius: 15px;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= EXTRA SECTION ================= */
+
+.extraComments {
+  text-align: center;
+  padding: 40px 20px;
+  font-weight: bold;
+}
+
+/* ================= FEEDBACK ================= */
+
+.star {
+  font-size: 45px;
+  cursor: pointer;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.star:hover {
+  color: gold;
+  transform: scale(1.2);
+}
+
+.star.active {
+  color: gold;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  margin-top: 40px;
+  background: #5a2d0c;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ================= SCROLL BAR ================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b4513;
+  border-radius: 10px;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .headers {
+    font-size: 28px;
+  }
+
+  .hero {
+    height: 260px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .card {
+    width: 95%;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    font-size: 15px;
+  }
+}

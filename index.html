@@ -1,0 +1,440 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Isaac's Kitchen | Place Your Order</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body id="forever">
+
+<header class="headers">
+
+🍔 ISAAC'S KITCHEN 🍔
+
+</header>
+
+<section>
+
+<h2>Customer Information</h2>
+
+<div class="card" style="max-width:700px ;margin:auto;">
+
+<div class="card-body">
+
+<label><strong>Customer Name</strong></label>
+
+<input
+type="text"
+id="customer"
+placeholder="Enter your full name(eg Akande Daramola)">
+
+<br>
+
+<label><strong>Phone Number</strong></label>
+
+<input
+type="number"
+id="phone"
+placeholder="08012345678"
+
+</div>
+
+</div>
+
+</section>
+
+<h2>Select Your Meals</h2>
+
+<div class="container">
+
+<!-- Burger -->
+
+<div class="card">
+
+<img src="images/burger.jpg" alt="Burger">
+
+<div class="card-body">
+
+<h3>Burger</h3>
+
+<p class="price">₦4,500</p>
+
+<button onclick="decreaseQuantity('Burger')">➖</button>
+
+<span id="BurgerQty">0</span>
+
+<button onclick="increaseQuantity('Burger')">➕</button>
+
+<br><br>
+
+<button onclick="addToCart('Burger',4500)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Pizza -->
+
+<div class="card">
+
+<img src="images/pizza.jpg" alt="Pizza">
+
+<div class="card-body">
+
+<h3>Pizza</h3>
+
+<p class="price">₦7,500</p>
+
+<button onclick="decreaseQuantity('Pizza')">➖</button>
+
+<span id="PizzaQty">0</span>
+
+<button onclick="increaseQuantity('Pizza')">➕</button>
+
+<br><br>
+
+<button onclick="addToCart('Pizza',7500)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Chicken -->
+
+<div class="card">
+
+<img src="images/chicken.jpg" alt="Chicken">
+
+<div class="card-body">
+
+<h3>Chicken</h3>
+
+<p class="price">₦5,000</p>
+
+<button onclick="decreaseQuantity('Chicken')">➖</button>
+
+<span id="ChickenQty">0</span>
+
+<button onclick="increaseQuantity('Chicken')">➕</button>
+
+<br><br>
+
+<button onclick="addToCart('Chicken',5000)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Rice -->
+
+<div class="card">
+
+<img src="images/rice.jpg" alt="Rice">
+
+<div class="card-body">
+
+<h3>Rice</h3>
+
+<p class="price">₦4,000</p>
+
+<button onclick="decreaseQuantity('Rice')">➖</button>
+
+<span id="RiceQty">0</span>
+
+<button onclick="increaseQuantity('Rice')">➕</button>
+
+<br><br>
+
+<button onclick="addToCart('Rice',4000)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Fries -->
+
+<div class="card">
+
+<img src="images/fries.jpg" alt="Fries">
+
+<div class="card-body">
+
+<h3>Fries</h3>
+
+<p class="price">₦2,500</p>
+
+<button onclick="decreaseQuantity('Fries')">➖</button>
+
+<span id="FriesQty">0</span>
+
+<button onclick="increaseQuantity('Fries')">➕</button>
+
+<br><br>
+
+<button onclick="addToCart('Fries',2500)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Hotdog -->
+
+<div class="card">
+
+<img src="images/hotdog.jpg" alt="Hotdog">
+
+<div class="card-body">
+
+<h3>Hotdog</h3>
+
+<p class="price">₦3,000</p>
+
+<button onclick="decreaseQuantity('Hotdog')">➖</button>
+
+<span id="HotdogQty">0</span>
+
+<button onclick="increaseQuantity('Hotdog')">➕</button>
+
+<br><br>
+
+<button onclick="addToCart('Hotdog',3000)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+<!-- Cake -->
+
+<div class="card">
+
+<img src="images/cake.jpg" alt="Cake">
+
+<div class="card-body">
+
+<h3>Chocolate Cake</h3>
+
+<p class="price">₦3,500</p>
+
+<button onclick="decreaseQuantity('Cake')">➖</button>
+
+<span id="CakeQty">0</span>
+
+<button onclick="increaseQuantity('Cake')">➕</button>
+
+<br><br>
+
+<button onclick="addToCart('Cake',3500)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Ice Cream -->
+
+<div class="card">
+
+<img src="images/icecream.jpg" alt="Ice Cream">
+
+<div class="card-body">
+
+<h3>Ice Cream</h3>
+
+<p class="price">₦2,000</p>
+
+<button onclick="decreaseQuantity('IceCream')">➖</button>
+
+<span id="IceCreamQty">0</span>
+
+<button onclick="increaseQuantity('IceCream')">➕</button>
+
+<br><br>
+
+<button onclick="addToCart('IceCream',2000)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Juice -->
+
+<div class="card">
+
+<img src="images/juice.jpg" alt="Juice">
+
+<div class="card-body">
+
+<h3>Fresh Juice</h3>
+
+<p class="price">₦1,500</p>
+
+<button onclick="decreaseQuantity('Juice')">➖</button>
+
+<span id="JuiceQty">0</span>
+
+<button onclick="increaseQuantity('Juice')">➕</button>
+
+<br><br>
+
+<button onclick="addToCart('Juice',1500)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Milkshake -->
+
+<div class="card">
+
+<img src="images/milkshake.jpg" alt="Milkshake">
+
+<div class="card-body">
+
+<h3>Milkshake</h3>
+
+<p class="price">₦2,500</p>
+
+<button onclick="decreaseQuantity('Milkshake')">➖</button>
+
+<span id="MilkshakeQty">0</span>
+
+<button onclick="increaseQuantity('Milkshake')">➕</button>
+
+<br><br>
+
+<button onclick="addToCart('Milkshake',2500)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+<!-- Popcorn -->
+
+<div class="card">
+
+<img src="images/popcorn.jpg" alt="Popcorn">
+
+<div class="card-body">
+
+<h3>Popcorn</h3>
+
+<p class="price">₦1,000</p>
+
+<button onclick="decreaseQuantity('Popcorn')">➖</button>
+
+<span id="PopcornQty">0</span>
+
+<button onclick="increaseQuantity('Popcorn')">➕</button>
+
+<br><br>
+
+<button onclick="addToCart('Popcorn',1000)">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<section>
+
+<h2>Your Invoice</h2>
+
+<div class="card" style="margin:30px auto; padding:0%; width: 500px; max-width: 700px;">
+
+<div class="card-body" >
+<div class="image" >
+<textarea
+rows="15"
+readonly
+id="invoice"
+placeholder="Your invoice will appear here...">
+</textarea>
+</div >
+
+
+<br><br>
+
+<button onclick="generateInvoice()">
+📄 Generate Invoice
+</button>
+
+<button onclick="copyInvoice()">
+📋 Copy Invoice
+</button>
+
+<button onclick="printInvoice()">
+🖨 Print Invoice
+</button>
+
+<button onclick="clearCart()">
+🗑 Clear Cart
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="checkers">
+
+<a href="food.html">
+<button>🍽 Back to Menu</button>
+</a>
+
+<a href="feedback.html">
+<button>⭐ Feedback</button>
+</a>
+
+<a href="main.html">
+<button>🏠 Home</button>
+</a>
+
+</div>
+
+<footer class="contact">
+
+<p>📍 38, Ibukun-Olu Street, Akoka, Lagos - Isaac's Kitchen | Serving Delicious Meals Every Day</p>
+
+<p>📞 +234 8093132172</p>
+
+<p>✉ info@isaacskitchen.com</p>
+
+<p>&copy; 2026 Isaac's Kitchen. All Rights Reserved.</p>
+
+</footer>
+
+<script src="index.js"></script>
+
+</body>
+</html>
+

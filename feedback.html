@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isaac's Kitchen | Customer Feedback</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+.feedback-box{
+    width:90%;
+    max-width:700px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.feedback-box h2{
+    color:#8B4513;
+}
+
+.stars{
+    text-align:center;
+    margin:20px 0;
+}
+
+.star{
+    font-size:45px;
+    color:#ccc;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.star:hover{
+    transform:scale(1.2);
+}
+
+.star.active{
+    color:gold;
+}
+
+#thankYou{
+    display:none;
+    margin-top:25px;
+    background:#d4edda;
+    color:#155724;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
+label{
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="headers">
+
+⭐ CUSTOMER FEEDBACK ⭐
+
+</header>
+
+<div class="feedback-box">
+
+<h2>Tell Us About Your Experience</h2>
+
+<p>
+We appreciate your feedback. It helps us serve you better.
+</p>
+
+<label>Full Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your full name">
+
+<label>Email (Optional)</label>
+
+<input
+type="email"
+placeholder="example@email.com">
+
+<label>Phone Number (Optional)</label>
+
+<input
+type="number"
+placeholder="08012345678">
+
+<h3 style="text-align:center;">
+Rate Our Service
+</h3>
+
+<div class="stars">
+
+<span class="star" onclick="rate(1)">★</span>
+
+<span class="star" onclick="rate(2)">★</span>
+
+<span class="star" onclick="rate(3)">★</span>
+
+<span class="star" onclick="rate(4)">★</span>
+
+<span class="star" onclick="rate(5)">★</span>
+
+</div>
+
+<label>Your Comments</label>
+
+<textarea
+id="comment"
+rows="6"
+placeholder="Tell us what you enjoyed or what we can improve..."></textarea>
+
+<br><br>
+
+<button onclick="submitFeedback()">
+
+Submit Feedback
+
+</button>
+
+<div id="thankYou">
+
+<h2>🎉 Thank You!</h2>
+
+<p id="message"></p>
+
+</div>
+
+</div>
+
+<div class="checkers">
+
+<a href="main.html">
+<button>🏠 Home</button>
+</a>
+
+<a href="food.html">
+<button>🍽 Menu</button>
+</a>
+
+<a href="index.html">
+<button>🛒 Order Again</button>
+</a>
+
+</div>
+
+<footer>
+
+<p>© 2026 Isaac's Kitchen. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+let rating = 0;
+
+function rate(value){
+
+rating = value;
+
+let stars = document.querySelectorAll(".star");
+
+stars.forEach((star,index)=>{
+
+if(index < value){
+
+star.classList.add("active");
+
+}else{
+
+star.classList.remove("active");
+
+}
+
+});
+
+}
+
+function submitFeedback(){
+
+let name = document.getElementById("name").value.trim();
+
+let comment = document.getElementById("comment").value.trim();
+
+if(name=="" ){
+
+alert("Please enter your name.");
+
+return;
+
+}
+
+if(rating==0){
+
+alert("Please select a star rating.");
+
+return;
+
+}
+
+document.getElementById("thankYou").style.display="block";
+
+document.getElementById("message").innerHTML=
+
+"Thank you <strong>"+name+"</strong>!<br><br>"+
+
+"We appreciate your <strong>"+rating+" ⭐ rating.</strong><br><br>"+
+
+"Your feedback has been received successfully.<br><br>"+
+
+"<em>\""+comment+"\"</em><br><br>"+
+
+"We look forward to serving you again at <strong>Isaac's Kitchen.</strong>";
+
+document.getElementById("name").value="";
+document.getElementById("comment").value="";
+
+let stars=document.querySelectorAll(".star");
+
+stars.forEach(star=>star.classList.remove("active"));
+
+rating=0;
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
